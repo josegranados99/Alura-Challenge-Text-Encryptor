@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+:root {
+  --primary-color: #f3f5fc;
+  --secondary-color: #ffffff;
+  --button-color-primary: #d8dfe8;
+  font-family: "Inter", sans-serif;
+  --font-family: "Inter", sans-serif;
+  --font-inter-size-principal: 16px;
+  --font-inter-size-secundary: 32px;
+  --font-inter-size-tertiary: 24px;
+  --font-inter-weight-principal: 400;
+  --font-inter-color-primary: #0a3871;
+  --font-inter-color-secundary: #495057;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--primary-color);
+  display: flex;
+  padding: 40px 0 0 40px;
+  gap: 80px;
+  box-sizing: border-box;
+}
+
+.principal_content {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+/* --------------------------------------------------- */
+.section_encryptor {
+  display: flex;
+  flex-direction: column;
+  gap: 400px;
+}
+
+.container_textarea {
+  background-color: var(--primary-color);
+  width: 680px;
+  min-height: 290px;
+  outline: 0;
+  border: 0;
+  line-height: 48px;
+  resize: none;
+  font-family: var(--font-family);
+  font-weight: var(--font-inter-weight-principal);
+  font-size: var(--font-inter-size-secundary);
+  color: var(--font-inter-color-primary);
+}
+
+.container_textarea::placeholder {
+  font-family: var(--font-family);
+  font-weight: var(--font-inter-weight-principal);
+  font-size: var(--font-inter-size-secundary);
+  color: var(--font-inter-color-primary);
+}
+
+.container_img_text_encrypt {
+  display: flex;
+  gap: 8px;
+}
+
+.container_buttons {
+  display: flex;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.button_actions {
+  padding: 24px;
+  width: 330px;
+  border-radius: 24px;
+  border: thin solid var(--font-inter-color-primary);
+  font-weight: var(--font-inter-weight-principal);
+  font-size: var(--font-inter-size-principal);
+  color: var(--color-button);
+  line-height: 20px;
+  background-color: var(--background-color-button);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_actions:hover {
+  background-color: var(--background-color-button-hover);
+  color: var(--color-button-hover);
+}
+
+/*  -------------------------------------------------- */
+.center {
+  text-align: center;
+}
+
+.section_text_encryptor {
+  background-color: var(--secondary-color);
+  min-height: 900px;
+  width: 28%;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container_img_text_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 32px;
+  /* display: none; */
+}
+
+.container_img_text_encryptor {
+  padding: 0 32px;
+}
+
+.container_text_encryptor {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: var(--font-inter-size-tertiary);
+  color: var(--font-inter-color-primary);
+}
+
+.text_encrypt {
+  font-weight: var(--font-inter-weight-principal);
+  font-size: var(--font-inter-size-principal);
+  color: var(--font-inter-color-secundary);
+}
+
+.container_img_text_section_copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.display_none {
+  display: none;
+}
+
+.text_encrypt_decrypt {
+  width: 340px;
+  min-height: 660px;
+  padding: 32px;
+  font-weight: var(--font-inter-weight-principal);
+  font-size: var(--font-inter-size-tertiary);
+  line-height: 32px;
+  color: var(--font-inter-color-secundary);
+}
+
+#buttonCopy {
+  margin-bottom: 32px;
+}
+
+/*Tablet*/
+@media (max-width: 1439px) {
+  body {
+    flex-direction: column;
+  }
+
+  .principal_content {
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .container_textarea {
+    width: 690px;
+    min-height: 200px;
+  }
+
+  .container_img_text_encryptor {
+    display: none;
+  }
+
+  .section_text_encryptor {
+    min-height: 130px;
+    width: 690px;
+  }
+
+  .text_encrypt_decrypt {
+    min-height: 180px;
+    width: 620px;
+  }
+
+  #buttonCopy {
+    width: 620px;
+  }
+}
+
+/*Mobile*/
+@media (max-width: 767px) {
+  body {
+    flex-direction: column;
+  }
+
+  .principal_content {
+    flex-direction: column;
+    gap: 64px;
+  }
+
+  .container_textarea {
+    width: 340px;
+    min-height: 400px;
+  }
+
+  .container_buttons {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .section_text_encryptor {
+    min-height: 100px;
+    width: 330px;
+  }
+
+  .text_encrypt_decrypt {
+    min-height: 200px;
+    width: 280px;
+  }
+
+  #buttonCopy {
+    width: 280px;
+  }
+}
